@@ -25,10 +25,8 @@ const path = require('path');
 client.registry
     .registerGroups([
         ['image-posting', 'Post stupid images!'],
-        ['image-manipulation','Mess around with images right here in Discord!'],
         ['misc', 'Other commands!']
     ])
-    .registerDefaults()
     .registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.login(process.env.DISCORD_TOKEN);
