@@ -12,6 +12,6 @@ module.exports = class WholesomeCommand extends Command {
     }
 
     run(msg) {
-        return msg.say(`https://cdn.discordapp.com/attachments/412494829935919106/472839799846469662/been_sitting_on_this_format_for_a_while_now_so_had_to_make_something.gif`);
+        return msg.say(`https://cdn.discordapp.com/attachments/412494829935919106/472863254318678034/not_sure_how_i_missed_that_the_first_time.gif`);
     }
 };
