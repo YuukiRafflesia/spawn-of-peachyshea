@@ -66,7 +66,7 @@ bot.on('message', msg => {
     if (command === 'kumikonnor') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/413449617401708555/457952177290215425/Kumikonnor.jpg`);
     }
-    if (command === 'love') {
+    if (command === 'penguinlove') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/416425531375091732/473460432921690128/Yuukin_do_it.gif`);
     }
     if (command === 'ohio') {
