@@ -16,12 +16,7 @@ bot.on('ready', () => {
     console.log(`Peachyshea is up and running and ready to do stupid shit!`);
 });
 
-let prefix = '&';
-
 bot.on('message', msg => {
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
     if (!msg.guild) return;
 
     // *** RANDOM SHIT *** //
@@ -30,11 +25,22 @@ bot.on('message', msg => {
         msg.channel.send(`Testingu testingu!`);
     }
 
-    if (msg.content === '&dumbify') {
-        let letterArr = args;
-    }
-
     // *** FUN STUFF *** //
+
+    if (msg.content === '&makechart top') {
+        let channel = bot.channels.get(msg.channel.id);
+        console.log(`Found channel!`);
+
+        channel.fetchMessages().then(messages => {
+            let lastTop = messages.find(val => val.id === 172002275412279296);
+            console.log(`Found message!`);
+
+            
+
+            msg.channel.send(`${lastTop}`);
+        })
+        .catch(console.error);
+    }
 
     /*
     if (msg.content === '&score') {
@@ -47,9 +53,20 @@ bot.on('message', msg => {
 
     // Coming soon maybe
     
-    // *** ANILIST STUFF *** //
+    // *** JIKANJS STUFF *** //
 
-    // Coming soon maybe
+    /*
+    if (msg.content.startsWith === '&ngnltest') {
+        jikanjs.loadAnime(19815, 'episodes').then((response) => {
+            response.episodes.forEach(element => {
+                console.log(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
+                msg.channel.send(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
+            })
+        }).catch((err) => {
+            console.error(err); // in case a error happens
+        });
+    }
+    */
 
     // ***** GAMES ***** //
     
@@ -104,6 +121,9 @@ bot.on('message', msg => {
     }
     if (msg.content === '&thot') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/405533644250152962/560851328935526424/image0.png`);
+    }
+    if (msg.content === '&nitrosaga') {
+        msg.channel.send(`https://cdn.discordapp.com/attachments/405533644250152962/570289755355480285/Screen_Shot_2019-04-24_at_1.47.32_AM.jpg`);
     }
 
     // ***** MADE IN ANIME WAR ***** //
