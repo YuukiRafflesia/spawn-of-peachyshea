@@ -12,6 +12,8 @@ app.listen(process.env.PORT);
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const prefix = '&';
+
 bot.on('ready', () => {
     console.log(`Peachyshea is up and running and ready to do stupid shit!`);
 });
@@ -27,46 +29,19 @@ bot.on('message', msg => {
 
     // *** FUN STUFF *** //
 
-    if (msg.content === '&makechart top') {
-        let channel = bot.channels.get(msg.channel.id);
-        console.log(`Found channel!`);
-
-        channel.fetchMessages().then(messages => {
-            let lastTop = messages.find(val => val.id === 172002275412279296);
-            console.log(`Found message!`);
-
-            
-
-            msg.channel.send(`${lastTop}`);
-        })
-        .catch(console.error);
+    if (msg.content.startsWith('&score')) {
+        let score = Math.floor(Math.random() * Math.floor(11));
+        let thingToScore = msg.content.slice(7);
+        msg.channel.send(`Hmmm... I think I'll give **${thingToScore}** a score of **${score}/10**!`);
     }
 
-    /*
-    if (msg.content === '&score') {
-        
-        Math.floor(Math.random() * Math.floor(11));
+    if (msg.content === '&gehlist') {
+
     }
-    */
 
     // *** IMAGE MANIPULATION *** //
 
     // Coming soon maybe
-    
-    // *** JIKANJS STUFF *** //
-
-    /*
-    if (msg.content.startsWith === '&ngnltest') {
-        jikanjs.loadAnime(19815, 'episodes').then((response) => {
-            response.episodes.forEach(element => {
-                console.log(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
-                msg.channel.send(`${element.episode_id}: ${element.title} - ${element.title_romanji} - ${element.title_japanese}`);
-            })
-        }).catch((err) => {
-            console.error(err); // in case a error happens
-        });
-    }
-    */
 
     // ***** GAMES ***** //
     
