@@ -30,9 +30,23 @@ bot.on('message', msg => {
     // *** FUN STUFF *** //
 
     if (msg.content.startsWith('&score')) {
-        let score = Math.floor(Math.random() * Math.floor(11));
+        let score = Math.floor(Math.random() * 11);
         let thingToScore = msg.content.slice(7);
-        msg.channel.send(`Hmmm... I think I'll give **${thingToScore}** a score of **${score}/10**!`);
+        
+        let msgVariant = Math.floor(Math.random() * 3);
+        switch (msgVariant) {
+            case 0:
+                msg.channel.send(`Hmmm... I think I'll give **${thingToScore}** a score of **${score}/10**!`);
+                break;
+            case 1:
+                if (score > 7) msg.channel.send(`I gotta give **${thingToScore}** a **${score}/10** for sure!`);
+                else if (score < 8 && score > 3) msg.channel.send(`I'm gonna give **${thingToScore}** a **${score}/10**. It's alright I guess.`);
+                else if (score < 4) msg.channel.send(`Uh, it's a ${score}/10. Not worth your time really.`)
+                break;
+            case 2:
+                msg.channel.send(`I gave **${thingToScore}** a score of **${score}/10**, of course!`);
+                break;
+        }
     }
 
     if (msg.content === '&gehlist') {
