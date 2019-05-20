@@ -1,18 +1,7 @@
 require('dotenv').config();
 
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping Received");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
-const prefix = '&';
 
 bot.on('ready', () => {
     console.log(`Peachyshea is up and running and ready to do stupid shit!`);
@@ -47,10 +36,6 @@ bot.on('message', msg => {
                 msg.channel.send(`I gave **${thingToScore}** a score of **${score}/10**, of course!`);
                 break;
         }
-    }
-
-    if (msg.content === '&gehlist') {
-
     }
 
     // *** IMAGE MANIPULATION *** //
