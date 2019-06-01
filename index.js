@@ -10,10 +10,22 @@ bot.on('ready', () => {
 bot.on('message', msg => {
     if (!msg.guild) return;
 
-    // *** RANDOM SHIT *** //
-    
-    if (msg.content === '&testo') {
-        msg.channel.send(`Testingu testingu!`);
+    // *** HELP FOR BEING HELPFUL *** //
+
+    if (msg.content === '&help') {
+        const helpEmbed = new  Discord.RichEmbed()
+            .setColor('#33ffa2')
+            .setTitle('You rangggg?')
+            .setDescription('Sup? Ya boi Peachyshea ready to kick ass with cool commands!')
+            .addBlankField()
+            .addField('&score <thing to score>', `Get's my super-well-educated opinion on whatever you say!`)
+            .addField('&images', `DM's ya with a list of image posting commands! Just... Don't tell my mother about &tasty...`);
+
+        msg.channel.send(helpEmbed);
+    }
+
+    if (msg.content === '&images') {
+        msg.author.send(`Yo! Here's that cool-ass list ya asked for!\n\n&bahaha\n&connordie\n&kumikonnor\n&penguinlove\n&ohio\n&patbob\n&peach\n&smug\n&suffer\n&delicious\n&tasty\n&notworth\n&thankspod\n&welcome\n&wholesome\n&thot\n&nitrosaga`);
     }
 
     // *** FUN STUFF *** //
@@ -99,10 +111,6 @@ bot.on('message', msg => {
     if (msg.content === '&nitrosaga') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/405533644250152962/570289755355480285/Screen_Shot_2019-04-24_at_1.47.32_AM.jpg`);
     }
-
-    // ***** MADE IN ANIME WAR ***** //
-
-    // Gotta figure out other shit first lmao
 });
 
 bot.login(process.env.DISCORD_TOKEN);
