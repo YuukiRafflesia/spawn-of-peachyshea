@@ -120,6 +120,9 @@ bot.on('message', msg => {
     if (msg.content === '&gamerboypiss') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/453249833709469712/599553546618142750/SmartSelect_20180625-002644_Discord.jpg`);
     }
+    if (msg.content === '&piss') {
+        msg.channel.send(`https://cdn.discordapp.com/attachments/453249833709469712/599553546618142750/SmartSelect_20180625-002644_Discord.jpg`);
+    }
 });
 
 bot.login(process.env.DISCORD_TOKEN);
