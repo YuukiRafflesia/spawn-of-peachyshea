@@ -111,6 +111,15 @@ bot.on('message', msg => {
     if (msg.content === '&nitrosaga') {
         msg.channel.send(`https://cdn.discordapp.com/attachments/405533644250152962/570289755355480285/Screen_Shot_2019-04-24_at_1.47.32_AM.jpg`);
     }
+    if (msg.content === '&connorpiss') {
+        msg.channel.send(`https://cdn.discordapp.com/attachments/453249833709469712/599553546618142750/SmartSelect_20180625-002644_Discord.jpg`);
+    }
+    if (msg.content === '&givemethepiss') {
+        msg.channel.send(`https://cdn.discordapp.com/attachments/453249833709469712/599553546618142750/SmartSelect_20180625-002644_Discord.jpg`);
+    }
+    if (msg.content === '&gamerboypiss') {
+        msg.channel.send(`https://cdn.discordapp.com/attachments/453249833709469712/599553546618142750/SmartSelect_20180625-002644_Discord.jpg`);
+    }
 });
 
 bot.login(process.env.DISCORD_TOKEN);
