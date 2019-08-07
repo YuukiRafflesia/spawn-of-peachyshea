@@ -18,14 +18,14 @@ bot.on('message', msg => {
             .setTitle('You rangggg?')
             .setDescription('Sup? Ya boi Peachyshea ready to kick ass with cool commands!')
             .addBlankField()
-            .addField('&score <thing to score>', `Get's my super-well-educated opinion on whatever you say!`)
+            .addField('&score <thing to score>', `Gets my super-well-educated opinion on whatever you say!`)
             .addField('&images', `DM's ya with a list of image posting commands! Just... Don't tell my mother about &tasty...`);
 
         msg.channel.send(helpEmbed);
     }
 
     if (msg.content === '&images') {
-        msg.author.send(`Yo! Here's that cool-ass list ya asked for!\n\n&bahaha\n&connordie\n&kumikonnor\n&penguinlove\n&ohio\n&patbob\n&peach\n&smug\n&suffer\n&delicious\n&tasty\n&notworth\n&thankspod\n&welcome\n&wholesome\n&thot\n&nitrosaga`);
+        msg.author.send(`Yo! Here's that cool-ass list ya asked for!\n\n&bahaha\n&connordie\n&kumikonnor\n&penguinlove\n&ohio\n&patbob\n&peach\n&smug\n&suffer\n&delicious\n&tasty\n&notworth\n&thankspod\n&welcome\n&wholesome\n&thot\n&nitrosaga\n&givemethepiss\n&gamerboypiss\n&piss\n&mood`);
     }
 
     // *** FUN STUFF *** //
@@ -48,6 +48,10 @@ bot.on('message', msg => {
                 msg.channel.send(`I gave **${thingToScore}** a score of **${score}/10**, of course!`);
                 break;
         }
+    }
+
+    if (msg.content === '&pfp') {
+        
     }
 
     // *** IMAGE MANIPULATION *** //
