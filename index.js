@@ -3,6 +3,10 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const Improv = require("improv");
+const yaml = require("js-yaml");
+const fsj = require("fs-jetpack");
+
 bot.on('ready', () => {
     console.log(`Peachyshea is up and running and ready to do stupid shit!`);
 });
@@ -52,6 +56,17 @@ bot.on('message', msg => {
 
     if (msg.content === '&pfp') {
         
+    }
+
+    if (msg.content === '&ln') {
+        const grammarData = yaml.load(fsj.read('ln.yaml'));
+
+        const generator = new Improv(grammarData, {
+            // filters: [Improv.filters.mismatchFilter()],
+            reincorporate: true
+        });
+
+        msg.channel.send(generator.gen('root', {}))
     }
 
     // *** IMAGE MANIPULATION *** //

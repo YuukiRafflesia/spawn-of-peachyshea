@@ -1,0 +1,139 @@
+root:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "I'm [:bad] at [:thing], But I [:stat] My [:skill] Skill So I Got Reincarnated as [a :objdesc] [:noun]! [:opinion]"
+bad:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Bad"
+        - "Horrible"
+        - "Terrible"
+good:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Good"
+        - "Amazing"
+        - "Incredible"
+objdesc:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Broken"
+        - "Destroyed"
+        - "Mutilated"
+        - "Recently Repaired"
+        - "Clean"
+        - "Recently Cleaned"
+        - "Polished"
+        - "Happy"
+        - "Sad"
+        - "Annoyed"
+        - "Angry"
+noun:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Shitstain"
+        - "Pile of Shit"
+        - "Bottle of Beer"
+        - "Bottle of Wine"
+        - "Bottle of Lager"
+        - "Bottle of Whisky"
+        - "Bottle of Some Random Fermented Drink"
+        - "Cork"
+        - "Fork"
+        - "Knife"
+        - "Spoon"
+        - "Spork"
+        - "Bath"
+        - "Toilet"
+        - "Sink"
+        - "Bed"
+        - "Single Bed"
+        - "Double Bed"
+        - "King-Size Bed"
+        - "Curtain"
+        - "Frying Pan"
+        - "Useless Item"
+thing:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Communication"
+        - "Socialising"
+        - "Leaving the House"
+        - "Not Being a NEET"
+        - "Acting"
+        - "Dancing"
+        - "Eating"
+        - "Drinking"
+        - "Not Getting Smashed After a Night Out"
+        - "Getting Smashed After a Night Out"
+        - "Dying"
+        - "Living"
+        - "Crying"
+        - "Smiling"
+        - "Showing Emotion"
+        - "Anything Useful"
+        - "Anything Helpful"
+        - "Writing"
+        - "Drawing"
+        - "Playing Piano"
+        - "Playing Guitar"
+        - "Playing Bass"
+        - "Playing Drums"
+        - "Playing Violin"
+        - "Playing Cello"
+        - "Thinking"
+        - "Thinking Sensibly"
+        - "Shitposting"
+        - "Joking"
+        - "Not Taking Things Seriously"
+        - "Taking Things Seriously"
+stat:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Maxed Out"
+        - "Leveled Up"
+        - "Increased"
+skill:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Negotiation"
+        - "Fighting"
+        - "Crying"
+        - "Dying"
+        - "Staying Alive"
+        - "Eating"
+        - "Drinking"
+        - "Work Ethic"
+        - "Carpentry"
+        - "Blacksmith"
+        - "Creativity"
+        - "Adaptability"
+        - "Teamwork"
+opinion:
+  groups:
+    -
+      tags: []
+      phrases:
+        - "Ugh..."
+        - "Yay!"
+        - "Woo!"
+        - "Yeet!"
+        - "Oh no..."
+        - "Well Shit..."
+        - "I'm Completely Fucked!"
