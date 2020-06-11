@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "dotenv": "^6.0.0",
+    "enmap": "^5.2.3",
     "express": "^4.16.3",
     "fs-jetpack": "^2.2.3",
     "improv": "^1.0.0",
